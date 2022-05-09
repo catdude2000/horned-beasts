@@ -16,7 +16,9 @@
     */
      render(){
        return(
-       <header className='app' />
+       <div className='App'>
+         <h1>This is the header</h1>
+       </div>
      );
    }
  }
