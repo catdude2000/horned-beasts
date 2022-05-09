@@ -1,7 +1,7 @@
 /**
- * @file App.js
+ * @file Main.js
  * @author Mike Pace
- * @description Horned Beasts lab header
+ * @description Horned Beasts lab main
  */
  import React from 'react';
 
@@ -9,19 +9,19 @@
  import './App.css';
  
  
- class App extends React.Component{
+ class Main extends React.Component{
  
    /**
     * @returns React.Component
     */
      render(){
        return(
-       <header className='app' />
+       <main className='main' />
      );
    }
  }
  
  
  
- export default App;
+ export default Main;
  
