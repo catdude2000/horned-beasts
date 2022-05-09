@@ -5,7 +5,8 @@
  */
  import React from 'react';
  import './App.css';
- import Main from './Main'
+ import Main from './Main';
+ import Footer from './Footer';
  
  class App extends React.Component{
  
@@ -17,6 +18,7 @@
        <div className='App'>
          <h1>This is the header</h1>
          <Main />
+         <Footer />
        </div>
      );
    }
