@@ -4,6 +4,7 @@
  * @description hornedbeast component
  */
 import React from "react";
+import { Image } from 'react-bootstrap'
 
 class HornedBeast extends React.Component{
   render(){
@@ -11,7 +12,10 @@ class HornedBeast extends React.Component{
 
       <section>
             <h2>{this.props.title}</h2>
-            <img src={this.props.src} alt={this.props.alt} title={this.props.title} />
+              <Image
+              src={this.props.imageUrl}
+              />
+            {/* <img src={this.props.src} alt={this.props.alt} title={this.props.title} /> */}
             <p>{this.props.description}</p>
       </section>
     );

@@ -7,9 +7,11 @@
  import './App.css';
  import Main from './Main';
  import Footer from './Footer';
+ import beasts from './data.json'
  
  class App extends React.Component{
  
+
    /**
     * @returns React.Component
     */
