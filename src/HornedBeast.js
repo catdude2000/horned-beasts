@@ -5,7 +5,6 @@
  */
 import React from "react";
 import { Image } from 'react-bootstrap'
-let votes = 0
 
 class HornedBeast extends React.Component{
 
