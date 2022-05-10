@@ -8,7 +8,6 @@
  import './App.css';
  import HornedBeast from './HornedBeast';
  
- 
  class Main extends React.Component{
  
    /**
