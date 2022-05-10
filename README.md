@@ -75,25 +75,25 @@ Estimate of time needed to complete: 40 minutes
 
 Start time: 1:47 PM
 
-Finish time: 
+Finish time: 4:18 PM
 
-Actual time needed to complete: 
+Actual time needed to complete: 2:31 
 
 Number and name of feature: #2 Allow users to vote for their favorite beast
 
 Estimate of time needed to complete: 35 minutes
 
-Start time: _____
+Start time: 4:22 PM
 
-Finish time: _____
+Finish time: 4:40 PM
 
-Actual time needed to complete: _____
+Actual time needed to complete: :18
 
 Number and name of feature: #3 Bootstrap
 
 Estimate of time needed to complete: 50 minutes
 
-Start time: _____
+Start time: 4:42
 
 Finish time: _____
 

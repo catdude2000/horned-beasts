@@ -4,35 +4,89 @@
  * @description Horned Beasts lab main
  */
  import React from 'react';
+ import { Col, Container, Row } from 'react-bootstrap';
  import './App.css';
  import HornedBeast from './HornedBeast';
  
- 
  class Main extends React.Component{
-
-  /**
-   * 
-   * @param {object} props 
-   */
-
  
    /**
     * @returns React.Component
     */
      render(){
+       const beastObs = this.props.beasts;
        return(
-        // <>
           <main>
-            <HornedBeast title='WildBoi' src='http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg' alt='altern' 
-            description='This is a Wild Boi' />
-            <HornedBeast title='CalmBoi' src='https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80' alt='altern2'
-            description='This is a Calm Boi' />
+            <Container>
+              <Row>
+                <Col>
+                  <HornedBeast beastObs={beastObs[0]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[1]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[2]}/>
+                </Col>
+                <Row>
+                <Col>
+                  <HornedBeast beastObs={beastObs[3]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[4]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[5]}/>
+                </Col>
+                </Row>
+                <Col>
+                  <HornedBeast beastObs={beastObs[6]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[7]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[8]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[9]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[10]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[11]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[12]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[13]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[14]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[15]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[16]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[17]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[18]}/>
+                </Col>
+                <Col>
+                  <HornedBeast beastObs={beastObs[19]}/>
+                </Col>
+              </Row>
+            </Container>
             </main>
      );
    }
  }
- 
- 
  
  export default Main;
  

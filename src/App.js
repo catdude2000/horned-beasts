@@ -7,6 +7,7 @@
  import './App.css';
  import Main from './Main';
  import Footer from './Footer';
+ import beasts from './data.json'
  
  class App extends React.Component{
  
@@ -16,8 +17,8 @@
      render(){
        return(
        <div className='App'>
-         <h1>This is the header</h1>
-         <Main />
+         <h1>Lab 2</h1>
+         <Main beasts={beasts}/>
          <Footer />
        </div>
      );
