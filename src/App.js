@@ -18,8 +18,8 @@
      render(){
        return(
        <div className='App'>
-         <h1>This is the header</h1>
-         <Main />
+         <h1>Lab 2</h1>
+         <Main beasts={beasts}/>
          <Footer />
        </div>
      );
