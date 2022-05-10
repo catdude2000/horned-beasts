@@ -32,6 +32,8 @@ class HornedBeast extends React.Component{
               <Image
               onClick={this.handleClick}
               src={this.props.beastObs.image_url}
+              fluid
+              rounded
               />
             <p>{this.props.beastObs.description}</p>
             <p>heart {this.state.votes}</p>

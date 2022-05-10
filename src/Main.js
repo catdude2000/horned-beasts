@@ -16,7 +16,6 @@
      render(){
        const beastObs = this.props.beasts;
        return(
-        // <>
           <main>
             <Container>
               <Row>
@@ -29,6 +28,7 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[2]}/>
                 </Col>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[3]}/>
                 </Col>
@@ -38,6 +38,7 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[5]}/>
                 </Col>
+                </Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[6]}/>
                 </Col>
