@@ -28,6 +28,7 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[2]}/>
                 </Col>
+                </Row>
                 <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[3]}/>
@@ -39,6 +40,7 @@
                   <HornedBeast beastObs={beastObs[5]}/>
                 </Col>
                 </Row>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[6]}/>
                 </Col>
@@ -48,6 +50,8 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[8]}/>
                 </Col>
+                </Row>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[9]}/>
                 </Col>
@@ -57,6 +61,8 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[11]}/>
                 </Col>
+                </Row>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[12]}/>
                 </Col>
@@ -66,6 +72,8 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[14]}/>
                 </Col>
+                </Row>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[15]}/>
                 </Col>
@@ -75,6 +83,8 @@
                 <Col>
                   <HornedBeast beastObs={beastObs[17]}/>
                 </Col>
+                </Row>
+                <Row>
                 <Col>
                   <HornedBeast beastObs={beastObs[18]}/>
                 </Col>
