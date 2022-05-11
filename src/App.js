@@ -8,6 +8,7 @@
  import Main from './Main';
  import Footer from './Footer';
  import beasts from './data.json'
+//  import HornedBeast from './HornedBeast';
  
  class App extends React.Component{
  
