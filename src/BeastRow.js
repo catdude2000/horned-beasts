@@ -11,17 +11,19 @@ import HornedBeast from './HornedBeast';
 
 class BeastRow extends React.Component{
   render(){
+    // console.log(this.props.beast, 'beast')
     return(
+
       <Row>
         {
         this.props.beasts.map((beast) =>{
           return (
             // key needed immediately below suchas beast._id
-            <Col>
+            <Col key = {beast._id} >
               <HornedBeast 
+              handleChange={this.props.handleChange}
+              beastObs = {beast}
               // key needed from above here in hornedbeast
-              title={this.beastObs.title}
-              image_url={this.beastObs.image_url} description={this.beastObs.description}
               />
             </Col>
             );

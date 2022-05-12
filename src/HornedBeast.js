@@ -21,6 +21,7 @@ class HornedBeast extends React.Component{
   handleClick =() => {
     const newStatus = this.state.votes + 1;
     this.setState({votes : newStatus});
+    this.props.handleChange(this.props.beastObs);
     console.log(this.state.votes, 'votes')
   };
 

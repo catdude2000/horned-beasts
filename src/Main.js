@@ -23,31 +23,30 @@ import BeastRow from './BeastRow';
   chosenBeast=() => {
     let chosenBeasts = []
     let current = []
-    for (let i = 0; i < this.props.beasts.length; i++){
+    for (let i = 0; i < this.props.chosen.length; i++){
       if (i !== 0 && i%3 === 1){
         chosenBeasts.push(current)
       }
-      current.push(this.props.beasts[i])
+      current.push(this.props.chosen[i]);
     }
-    chosenBeasts.push(current);
     return chosenBeasts;
+    
   }
      render(){
+       let keyvalue = 1;
       console.log("arrylength", this.state.chosen.length);
        return(
           <main>
             <Container>
               {
-
                 /**
                  * chosen=current
                  * x represents smaller array(subarray), which will be different depending on how far the loop is
                  */
                 this.state.chosen.map((x) => {
-                  // keyvalu++;
+                  keyvalue++;               
                   // key={keyvalue} key only on this file
-                  // rowdata={subArray}
-                  return <BeastRow beasts={x} />
+                  return <BeastRow key={keyvalue} beasts={x} handleChange={this.props.handleChange} />
                 })
               }
             </Container>
