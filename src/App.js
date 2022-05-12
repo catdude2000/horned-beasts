@@ -29,8 +29,10 @@ handleChange = (beast) =>{
 }
 
 handleClose = () =>{
+  console.log('handleClose')
   this.setState({
     show: false
+  
   
   })
 }
