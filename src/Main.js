@@ -4,96 +4,54 @@
  * @description Horned Beasts lab main
  */
  import React from 'react';
- import { Col, Container, Row } from 'react-bootstrap';
+ import { Container } from 'react-bootstrap';
  import './App.css';
- import HornedBeast from './HornedBeast';
+import BeastRow from './BeastRow';
+//  import HornedBeast from './HornedBeast';
+ import Footer from './Footer';
+
  
  class Main extends React.Component{
  
    /**
     * @returns React.Component
     */
+  constructor(props){
+    super(props);
+    this.state={chosen: this.chosenBeast()}
+  }
+  chosenBeast=() => {
+    let chosenBeasts = []
+    let current = []
+    for (let i = 0; i < this.props.chosen.length; i++){
+      if (i !== 0 && i%3 === 1){
+        chosenBeasts.push(current)
+      }
+      current.push(this.props.chosen[i]);
+    }
+    return chosenBeasts;
+    
+  }
      render(){
-       const beastObs = this.props.beasts;
+       let keyvalue = 1;
+      console.log("arrylength", this.state.chosen.length);
        return(
           <main>
             <Container>
-              <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[0]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[1]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[2]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[3]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[4]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[5]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[6]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[7]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[8]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[9]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[10]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[11]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[12]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[13]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[14]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[15]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[16]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[17]}/>
-                </Col>
-                </Row>
-                <Row>
-                <Col>
-                  <HornedBeast beastObs={beastObs[18]}/>
-                </Col>
-                <Col>
-                  <HornedBeast beastObs={beastObs[19]}/>
-                </Col>
-              </Row>
+              {
+                /**
+                 * chosen=current
+                 * x represents smaller array(subarray), which will be different depending on how far the loop is
+                 */
+                this.state.chosen.map((x) => {
+                  keyvalue++;               
+                  // key={keyvalue} key only on this file
+                  return <BeastRow key={keyvalue} beasts={x} handleChange={this.props.handleChange} />
+                })
+              }
             </Container>
-            </main>
+            <Footer />
+          </main>
      );
    }
  }

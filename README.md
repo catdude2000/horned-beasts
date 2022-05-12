@@ -95,6 +95,18 @@ Estimate of time needed to complete: 50 minutes
 
 Start time: 4:42
 
-Finish time: _____
+Finish time: next day
 
-Actual time needed to complete: _____
+Actual time needed to complete: about 2 hours
+
+Lab 3
+
+Number and name of feature: #1 Display a Modal
+
+Estimate of time needed to complete: 55 minutes
+
+Start time: 3:04 PM
+
+Finish time: 
+
+Actual time needed to complete: 
