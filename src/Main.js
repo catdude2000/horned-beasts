@@ -38,7 +38,15 @@ import BeastRow from './BeastRow';
           <main>
             <Container>
               {
+
+                /**
+                 * chosen=current
+                 * x represents smaller array(subarray), which will be different depending on how far the loop is
+                 */
                 this.state.chosen.map((x) => {
+                  // keyvalu++;
+                  // key={keyvalue} key only on this file
+                  // rowdata={subArray}
                   return <BeastRow beasts={x} />
                 })
               }

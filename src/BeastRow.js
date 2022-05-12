@@ -16,14 +16,17 @@ class BeastRow extends React.Component{
         {
         this.props.beasts.map((beast) =>{
           return (
-        <Col>
-          <HornedBeast 
-          title={this.beastObs.title}
-           image_url={this.beastObs.image_url} description={this.beastObs.description}
-           />
-        </Col>
-          );
-     }) };
+            // key needed immediately below suchas beast._id
+            <Col>
+              <HornedBeast 
+              // key needed from above here in hornedbeast
+              title={this.beastObs.title}
+              image_url={this.beastObs.image_url} description={this.beastObs.description}
+              />
+            </Col>
+            );
+        })
+        };
       </Row>
     )
 }
