@@ -27,7 +27,7 @@ handleChange = (beast) =>{
 }
 
 handleClose = () =>{
-  console.log('handleClose')
+  // console.log('handleClose')
   this.setState({
     show: false
   })
@@ -65,7 +65,7 @@ hornlist = (evt) => {
        <div className='App'>
          <h1>Lab 2</h1>
          <div>
-          <select defaultValue={this.state.beasts} 
+          <select defaultValue={'all'} 
           onChange={this.hornlist} 
           >
             <option value= 'all'>all</option>
