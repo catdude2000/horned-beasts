@@ -40,12 +40,14 @@
      render(){
        let keyvalue = 1;
       console.log("arrylength", this.state.chosen.length);
+      let currentBeasts = this.chosenBeast();
        return(
           <main>
             <Container>
               {
-                this.state.chosen.map((x) => {
+                currentBeasts.map((x) => {
                   keyvalue++;               
+
                   // key={keyvalue} key only on this file
                   return <BeastRow key={keyvalue} beasts={x} handleChange={this.props.handleChange} />
                 })
