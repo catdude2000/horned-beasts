@@ -9,6 +9,7 @@
  import Footer from './Footer';
  import beasts from './data.json'
 import SelectedBeast from './SelectedBeast';
+// import { FormSelect } from 'react-bootstrap';
 // import { Container, Modal } from 'react-bootstrap';
 // import SelectedBeast from './SelectedBeast';
 //  import HornedBeast from './HornedBeast';
@@ -36,15 +37,25 @@ handleClose = () =>{
   
   })
 }
-  //  handlechange func(clicked beast)
-  // handleclose function
+handleFormSubmitted = (evt) => {
+  evt.preventDefault();
+  console.log(`Submitted`);
+};
      render(){
        return(
        <div className='App'>
          <h1>Lab 2</h1>
+         <div>
+ <select defaultValue={this.state.selectValue} 
+ onChange={this.handleChange} 
+ >
+    <option value={beasts.horns=1}>1</option>
+    <option value="Radish">Radish</option>
+    <option value="Cherry">Cherry</option>
+  </select>
+  {/* <p>{message}</p> */}
+  </div>       
          <Main chosen={beasts} handleChange={this.handleChange}/>
-         {/* this.state.beast and this.state.show */}
-         {/* <SelectedBeast title={this.state.beastObs.title} image_url={this.state.beastObs.image_url} description={this.state.beastObs.description} votes={this.state.votes}/> */}
          <SelectedBeast show={this.state.show} beast={this.state.beast} close={this.handleClose}/>
          <Footer />
        </div>
