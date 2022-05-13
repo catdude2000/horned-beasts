@@ -107,6 +107,18 @@ Estimate of time needed to complete: 55 minutes
 
 Start time: 3:04 PM
 
+Finish time: next day
+
+Actual time needed to complete: 4 hours
+
+Lab 4
+
+Number and name of feature: #1 Filter by Numbers of Horns
+
+Estimate of time needed to complete: 90 minutes
+
+Start time: 9:15 PM
+
 Finish time: 
 
 Actual time needed to complete: 

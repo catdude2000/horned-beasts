@@ -6,14 +6,10 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import HornedBeast from './HornedBeast';
-// import Main from 'main';
-
 
 class BeastRow extends React.Component{
   render(){
-    // console.log(this.props.beast, 'beast')
     return(
-
       <Row>
         {
         this.props.beasts.map((beast) =>{
@@ -28,7 +24,7 @@ class BeastRow extends React.Component{
             </Col>
             );
         })
-        };
+        }
       </Row>
     )
 }

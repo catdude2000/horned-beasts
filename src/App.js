@@ -10,7 +10,6 @@
  import beasts from './data.json'
  import SelectedBeast from './SelectedBeast';
 
- 
  class App extends React.Component{
  
    /**
@@ -18,16 +17,17 @@
     */
 constructor(props){
   super(props);
-    this.state={show: false, beast: beasts[0]}
+    this.state={show: false, beast: beasts[0]
+    ,beastList: beasts}
+
   }
 handleChange = (beast) =>{
   this.setState({
     show: true, beast: beast
   })
 }
-
 handleClose = () =>{
-  console.log('handleClose')
+  // console.log('handleClose')
   this.setState({
     show: false
   })
@@ -36,14 +36,13 @@ handleFormSubmitted = (evt) => {
   evt.preventDefault();
   console.log(`Submitted`);
 };
-
 hornlist = (evt) => {
   let numHorns = evt.target.value;
   console.log('app.hornlist');
   if ('all' === numHorns) {
     console.log('allhorns');
     this.setState({
-      beast: beasts
+      beastList: beasts
     })
     console.log(this.state.beast.length, 'statebestlen')
   }
@@ -54,7 +53,7 @@ hornlist = (evt) => {
     })
     console.log(keepArray.length, 'keeplength')
     this.setState({
-      beast : keepArray
+      beastList : keepArray
     })
     console.log(this.state.beast.length, 'statebeastlength')
     return keepArray
@@ -65,7 +64,7 @@ hornlist = (evt) => {
        <div className='App'>
          <h1>Lab 2</h1>
          <div>
-          <select defaultValue={this.state.beasts} 
+          <select defaultValue={'all'} 
           onChange={this.hornlist} 
           >
             <option value= 'all'>all</option>
@@ -74,15 +73,13 @@ hornlist = (evt) => {
             <option value= "3">3</option>
           </select>
           </div>       
-          <Main chosen={this.state.beast} handleChange={this.handleChange}/>
+          <Main chosen={this.state.beastList} handleChange={this.handleChange}/>
           <SelectedBeast show={this.state.show} beast={this.state.beast} close={this.handleClose}/>
          <Footer />
        </div>
      );
    }
  }
- 
- 
  
  export default App;
  

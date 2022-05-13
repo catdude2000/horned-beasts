@@ -7,7 +7,6 @@
  import { Container } from 'react-bootstrap';
  import './App.css';
  import BeastRow from './BeastRow';
-
  import Footer from './Footer';
 
  
@@ -20,7 +19,6 @@
     super(props);
     this.state={chosen: this.chosenBeast()}
   }
-
 
   /**
    * 
@@ -42,16 +40,14 @@
      render(){
        let keyvalue = 1;
       console.log("arrylength", this.state.chosen.length);
+      let currentBeasts = this.chosenBeast();
        return(
           <main>
             <Container>
               {
-                /**
-                 * chosen=current
-                 * x represents smaller array(subarray), which will be different depending on how far the loop
-                 */
-                this.state.chosen.map((x) => {
+                currentBeasts.map((x) => {
                   keyvalue++;               
+
                   // key={keyvalue} key only on this file
                   return <BeastRow key={keyvalue} beasts={x} handleChange={this.props.handleChange} />
                 })
