@@ -6,8 +6,8 @@
  import React from 'react';
  import { Container } from 'react-bootstrap';
  import './App.css';
-import BeastRow from './BeastRow';
-//  import HornedBeast from './HornedBeast';
+ import BeastRow from './BeastRow';
+
  import Footer from './Footer';
 
  
@@ -20,17 +20,24 @@ import BeastRow from './BeastRow';
     super(props);
     this.state={chosen: this.chosenBeast()}
   }
+
+
+  /**
+   * 
+   * @returns 
+   */
   chosenBeast=() => {
     let chosenBeasts = []
     let current = []
     for (let i = 0; i < this.props.chosen.length; i++){
-      if (i !== 0 && i%3 === 1){
+      if (i !== 0 && i%3 === 0){
         chosenBeasts.push(current)
+        current=[]
       }
       current.push(this.props.chosen[i]);
     }
+    chosenBeasts.push(current);
     return chosenBeasts;
-    
   }
      render(){
        let keyvalue = 1;
@@ -41,7 +48,7 @@ import BeastRow from './BeastRow';
               {
                 /**
                  * chosen=current
-                 * x represents smaller array(subarray), which will be different depending on how far the loop is
+                 * x represents smaller array(subarray), which will be different depending on how far the loop
                  */
                 this.state.chosen.map((x) => {
                   keyvalue++;               
